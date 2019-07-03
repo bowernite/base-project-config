@@ -42,7 +42,7 @@ module.exports = {
     'no-unsafe-finally': 2,
     'use-isnan': 2,
     'valid-typeof': 2,
-    eqeqeq: ['error', 'always'],
+    eqeqeq: ['error', 'always', { null: 'ignore' }],
 
     /**
      * Best Practices
