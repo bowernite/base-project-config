@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "lint": "eslint . && prettier --check '**/*.{js,jsx,ts,tsx,scss,css,html,vue,json,md}'",
+    "lint-fix": "eslint . && prettier --write ---loglevel=error '**/*.{js,jsx,ts,tsx,scss,css,html,vue,json,md}'"
+  }
+}
