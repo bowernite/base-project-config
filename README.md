@@ -6,6 +6,8 @@ This repository stores basic configuration for JS project tooling. I use it to s
 
 `.eslintrc.js` defines ESLint rules to use. Most of them are code quality centric, as Prettier will handle any styling rules. Additionally, many of them might not be necessary in a TypeScript project (i.e. `no-use-before-define`).
 
+`.eslintignore` defines some common directories to ignore (i.e. `dist/`).
+
 ### Possible Variations
 
 The following rules/configuration options could be tweaked depending on the project.
@@ -19,6 +21,8 @@ The following rules/configuration options could be tweaked depending on the proj
 ## Prettier
 
  `.prettierrc.js` defines Prettier configuration to override some of their defaults. Because who needs semi-colons when your linter can catch the edge cases where you need them? 😃
+ 
+ `.prettierignore` defines some common directories to ignore (i.e. `dist/`).
  
 ## `package.json`
 
