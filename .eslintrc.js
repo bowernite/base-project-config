@@ -98,4 +98,16 @@ module.exports = {
     'jest/prefer-to-have-length': 2,
     'jest/valid-expect': 2,
   },
+  overrides: [
+    /**
+     * JS files only ran in the browser. Modify this to point at the client/src directory, depending on the project
+     */
+    {
+      files: ['client/**/+(js|jsx)'],
+      env: {
+        node: true,
+        browser: false,
+      },
+    },
+  ]
 }
