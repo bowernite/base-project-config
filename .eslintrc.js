@@ -49,6 +49,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/#best-practices
      */
+    'prefer-regex-literals': 2,
     'no-caller': 2,
     'no-case-declarations': 2,
     'no-empty-pattern': 2,
