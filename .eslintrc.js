@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:prettier/recommended'],
+  // `yarn add eslint-plugin-jest -D` || `npm i eslint-plugin-jest -D`
   plugins: ['jest'],
   env: {
     jest: true,
@@ -8,6 +8,7 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 9,
+    sourceType: 'module',
   },
 
   rules: {
