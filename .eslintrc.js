@@ -1,6 +1,10 @@
 module.exports = {
-  // `yarn add eslint-plugin-jest -D` || `npm i eslint-plugin-jest -D`
-  plugins: ['jest'],
+  // REVIEW: Jest plugin and rules
+  // REVIEW: React plugins and rules
+
+  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks'
+  plugins: ['jest', 'react-hooks'],
+  extends: ['plugin:react/recommended'],
   env: {
     jest: true,
     es6: true,
@@ -98,6 +102,12 @@ module.exports = {
     'jest/no-identical-title': 2,
     'jest/prefer-to-have-length': 2,
     'jest/valid-expect': 2,
+    
+    /**
+     * React hooks
+     */
+    'react-hooks/rules-of-hooks': 2,
+    'react-hooks/exhaustive-deps': 2,
   },
   overrides: [
     /**
