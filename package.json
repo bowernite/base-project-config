@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "lint": "eslint . && prettier --check '**/*.{js,jsx,ts,tsx,scss,css,html,vue,json,md,yml}'",
-    "lint-fix": "eslint . && prettier --write --loglevel=error '**/*.{js,jsx,ts,tsx,scss,css,html,vue,json,md,yml}'"
+    // REVIEW: `--ext` eslint list
+    "lint": "eslint . --ext js,jsx,ts,tsx && prettier --check '**/*.{js,jsx,ts,tsx,scss,css,html,vue,json,md,yml}'",
+    "lint-fix": "eslint . --ext js,jsx,ts,tsx && prettier --write --loglevel=error '**/*.{js,jsx,ts,tsx,scss,css,html,vue,json,md,yml}'"
   }
 }
