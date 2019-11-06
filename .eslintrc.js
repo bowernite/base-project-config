@@ -6,7 +6,6 @@ module.exports = {
   plugins: ['jest', 'react-hooks'],
   extends: ['plugin:react/recommended'],
   env: {
-    jest: true,
     es6: true,
     node: true,
   },
@@ -116,6 +115,7 @@ module.exports = {
     {
       files: ['client/**/+(js|jsx)'],
       env: {
+        jest: true,
         node: false,
         browser: true,
       },
