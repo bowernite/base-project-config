@@ -116,8 +116,8 @@ module.exports = {
     {
       files: ['client/**/+(js|jsx)'],
       env: {
-        node: true,
-        browser: false,
+        node: false,
+        browser: true,
       },
     },
     
