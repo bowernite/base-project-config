@@ -1,9 +1,9 @@
 module.exports = {
-  // REVIEW: Jest plugin and rules
+  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks'
+
   // REVIEW: React plugins and rules
 
-  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks'
-  plugins: ['jest', 'react-hooks'],
+  plugins: ['react-hooks'],
   extends: ['plugin:react/recommended'],
   env: {
     es6: true,
@@ -92,15 +92,6 @@ module.exports = {
      * https://eslint.org/docs/rules/#ecmascript-6
      */
     'constructor-super': 2,
-
-    /**
-     * Jest
-     */
-    'jest/no-disabled-tests': 2,
-    'jest/no-focused-tests': 2,
-    'jest/no-identical-title': 2,
-    'jest/prefer-to-have-length': 2,
-    'jest/valid-expect': 2,
     
     /**
      * React hooks
@@ -127,10 +118,17 @@ module.exports = {
      * Test files. Node is enabled, since Jest inherently is ran through Node. Browser is enabled because of the simulated browser env that Jest runs tests in.
      */
     {
-      files: ['client/**/*.spec.@(js|jsx)'],
+      // REVIEW: Jest setup file, test utils, etc. Anything that's not a `spec` file that should be treated in the test env
+      files: ['client/**/*.spec.@(js|jsx)', './jest.setup.js', 'client/test-utils/**/*.js'],
+      extends: ['plugin:jest/recommended'],
+      plugins: ['jest'],
       env: {
+        jest: true,
         node: true,
         browser: true,
+      },
+      rules: {
+        'jest/prefer-to-have-length': 2,
       },
     },
   ]
