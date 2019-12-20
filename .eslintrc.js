@@ -22,7 +22,7 @@ module.exports = {
      */
     'no-compare-neg-zero': 2,
     'no-cond-assign': 2,
-    'no-console': 2,
+    'no-console': [2, { allow: ['error'] }],
     'no-constant-condition': 2,
     'no-debugger': 2,
     'no-dupe-args': 2,
