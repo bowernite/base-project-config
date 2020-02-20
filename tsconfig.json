@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    // REVIEW
+    "outDir": "./dist/",
+    "sourceMap": true,
+    // REVIEW: Depending on which browsers to target, or if using Babel
+    "target": "es6",
+    // REVIEW: Might not be necessary
+    "jsx": "react",
+    "esModuleInterop": true,
+
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "strict": true
+  }
+}

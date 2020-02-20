@@ -4,9 +4,9 @@ This repository stores basic configuration for JS project tooling. I use it to s
 
 ## ESLint
 
-`.eslintrc.js` defines ESLint rules to use. Most of them are code quality centric, as Prettier will handle any styling rules. Additionally, many of them might not be necessary in a TypeScript project (i.e. `no-use-before-define`).
+`.eslintrc.js` defines ESLint rules to use. Most of them are code quality centric, as Prettier will handle any styling rules. Additionally, many of them might not be necessary in a TypeScript project (e.g. `no-use-before-define`).
 
-`.eslintignore` defines some common directories to ignore (i.e. `dist/`).
+`.eslintignore` defines some common directories to ignore (e.g. `dist/`).
 
 ### Possible Variations
 
@@ -22,12 +22,16 @@ The following rules/configuration options could be tweaked depending on the proj
 
  `.prettierrc.js` defines Prettier configuration to override some of their defaults. Because who needs semi-colons when your linter can catch the edge cases where you need them? 😃
  
- `.prettierignore` defines some common directories to ignore (i.e. `dist/`).
+ `.prettierignore` defines some common directories to ignore (e.g. `dist/`).
  
 ## `package.json`
 
-This file does not exist as an actual `package.json` to be consumed by npm/yarn. It is solely used to house more shared functionality (i.e. `scripts` for running ESLint and Prettier).
+This file does not exist as an actual `package.json` to be consumed by npm/yarn. It is solely used to house more shared functionality (e.g. `scripts` for running ESLint and Prettier).
 
 ### Notes
 
 * The `prettier` commands will possibly updated in the future to not include extensions. Prettier has hinted at support for formatting all files without using a glob that specifies extensions in [Prettier 2.0](https://github.com/prettier/prettier/issues/3503)
+
+## TypeScript
+
+`tsconfig.json` defines a TypeScript configuration to use. It uses all recommended "strict" rules, along with some linting rules. If using TypeScript, you'll likely be able to disable some ESLint rules (e.g. `no-unused-vars`).
