@@ -101,10 +101,10 @@ module.exports = {
   },
   overrides: [
     /**
-     * JS files only ran in the browser. Modify this to point at the client/src directory, depending on the project
+     * Files only ran in the browser. Modify this to point at the client/src directory, depending on the project
      */
     {
-      files: ['client/**/+(js|jsx)'],
+      files: ['client/**/*+(js|jsx|ts|tsx)'],
       env: {
         jest: true,
         node: false,
