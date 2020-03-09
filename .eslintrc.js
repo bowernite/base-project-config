@@ -145,7 +145,7 @@ module.exports = {
         'jest/no-test-callback': 2,
         'jest/no-test-prefixes': 2,
         'jest/no-try-expect': 2,
-        'jest/prefer-to-be-null: 2,
+        'jest/prefer-to-be-null': 2,
         'jest/prefer-to-be-undefined': 2,
         'jest/prefer-to-contain': 2,
         'jest/prefer-to-have-length': 2,
