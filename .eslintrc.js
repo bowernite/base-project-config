@@ -126,7 +126,6 @@ module.exports = {
     {
       // REVIEW: Jest setup file, test utils, etc. Anything that's not a `spec` file that should be treated in the test env
       files: ['client/**/*.spec.@(js|jsx|ts|tsx)', './jest.setup.js', 'client/test-utils/**/*.(js|jsx|ts|tsx)'],
-      extends: ['plugin:jest/recommended'],
       plugins: ['jest'],
       env: {
         jest: true,
@@ -135,6 +134,25 @@ module.exports = {
       },
       rules: {
         'jest/prefer-to-have-length': 2,
+        'jest/no-disabled-tests': 2,
+        'jest/no-commented-out-tests': 2,
+        'jest/no-focused-tests': 2,
+        'jest/no-identical-title': 2,
+        'jest/no-jasmine-globals': 2,
+        'jest/no-jest-import': 2,
+        'jest/no-mocks-import': 2,
+        'jest/no-standalone-expect': 2,
+        'jest/no-test-callback': 2,
+        'jest/no-test-prefixes': 2,
+        'jest/no-try-expect': 2,
+        'jest/prefer-to-be-null: 2,
+        'jest/prefer-to-be-undefined': 2,
+        'jest/prefer-to-contain': 2,
+        'jest/prefer-to-have-length': 2,
+        'jest/prefer-todo': 2,
+        'jest/valid-describe': 2,
+        'jest/valid-expect-in-promise': 2,
+        'jest/valid-expect': 2,
       },
     },
 
