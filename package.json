@@ -1,7 +1,7 @@
 {
   "scripts": {
     // REVIEW: `--ext` eslint list
-    "lint": "eslint . --ext js,jsx,ts,tsx && prettier --check .",
-    "lint-fix": "eslint . --fix --ext js,jsx,ts,tsx && prettier --write --loglevel=error ."
+    "lint": "eslint .&& prettier --check .",
+    "lint-fix": "eslint . --fix && prettier --write --loglevel=error ."
   }
 }
