@@ -3,6 +3,7 @@ module.exports = {
 
   // REVIEW: React plugins and rules
   // REVIEW: TypeScript rules/config (file extensions, plugins, parsers, etc.)
+  // REVIEW: Make sure all extensions to be linted (other than .js) are covered at some point in the overrides section. This allows ESLint to lint them without passing in the --ext CLI option. @see https://github.com/eslint/rfcs/pull/20/files?short_path=89f153b#diff-89f153b40e57baa60c4da2693bb17305
 
   plugins: ['react-hooks', 'import'],
   extends: ['plugin:react/recommended'],
@@ -138,7 +139,6 @@ module.exports = {
         browser: true,
       },
       rules: {
-        'jest/prefer-to-have-length': 2,
         'jest/no-disabled-tests': 2,
         'jest/no-commented-out-tests': 2,
         'jest/no-focused-tests': 2,
