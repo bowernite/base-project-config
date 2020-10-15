@@ -1,12 +1,14 @@
 module.exports = {
-  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks', 'eslint-plugin-import', '@typescript-eslint/eslint-plugin', '@typescript-eslint/parser'
+  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks', 'eslint-plugin-import', '@typescript-eslint/eslint-plugin', '@typescript-eslint/parser', 'eslint-plugin-jsx-a11y'
 
   // REVIEW: React plugins and rules
   // REVIEW: TypeScript rules/config (file extensions, plugins, parsers, etc.)
   // REVIEW: Make sure all extensions to be linted (other than .js) are covered at some point in the overrides section. This allows ESLint to lint them without passing in the --ext CLI option. @see https://github.com/eslint/rfcs/pull/20/files?short_path=89f153b#diff-89f153b40e57baa60c4da2693bb17305
+  // REVIEW: jsx-a11y
 
-  plugins: ["react-hooks", "import"],
-  extends: ["plugin:react/recommended"],
+  plugins: ["react-hooks", "import", "jsx-a11y"],
+  // jsx-a11y: could remove usage, or even move to "plugin:jsx-a11y/strict"
+  extends: ["plugin:react/recommended", "plugin:jsx-a11y/recommended"],
   env: {
     es6: true,
     node: true,
