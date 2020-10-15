@@ -20,6 +20,8 @@ module.exports = {
       version: 'detect'
     }
   },
+  // REVIEW: May need to add things based on the project
+  ignorePatterns: ["dist/", "build/", "coverage/"],
 
   rules: {
     /**
