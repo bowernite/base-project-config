@@ -17,11 +17,11 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   // REVIEW: May need to add things based on the project
-  ignorePatterns: ["dist/", "build/", "coverage/"],
+  ignorePatterns: ['dist/', 'build/', 'coverage/'],
 
   rules: {
     /**
@@ -37,7 +37,7 @@ module.exports = {
     'no-dupe-args': 2,
     'no-dupe-keys': 2,
     'no-duplicate-case': 2,
-    'no-empty': [2, { 'allowEmptyCatch': true }],
+    'no-empty': [2, { allowEmptyCatch: true }],
     'no-empty-character-class': 2,
     'no-ex-assign': 2,
     'no-extra-boolean-cast': 2,
@@ -100,13 +100,19 @@ module.exports = {
      * https://eslint.org/docs/rules/#ecmascript-6
      */
     'constructor-super': 2,
-    
+
+    /**
+     * React
+     */
+    // REVIEW: Depends on the project (TS, if you care about prop-types, etc.)
+    'react/prop-types': 0,
+
     /**
      * React hooks
      */
     'react-hooks/rules-of-hooks': 2,
     'react-hooks/exhaustive-deps': 2,
-    
+
     /**
      * eslint-plugin-import
      */
@@ -125,15 +131,17 @@ module.exports = {
         browser: true,
       },
     },
-    
-    
 
     /**
      * Test files. Node is enabled, since Jest inherently is ran through Node. Browser is enabled because of the simulated browser env that Jest runs tests in.
      */
     {
       // REVIEW: Jest setup file, test utils, etc. Anything that's not a `spec` file that should be treated in the test env
-      files: ['client/**/*.spec.@(js|jsx|ts|tsx)', './jest.setup.js', 'client/test-utils/**/*.(js|jsx|ts|tsx)'],
+      files: [
+        'client/**/*.spec.@(js|jsx|ts|tsx)',
+        './jest.setup.js',
+        'client/test-utils/**/*.(js|jsx|ts|tsx)',
+      ],
       plugins: ['jest'],
       env: {
         jest: true,
@@ -202,5 +210,5 @@ module.exports = {
         '@typescript-eslint/require-await': 2,
       },
     },
-  ]
+  ],
 }
