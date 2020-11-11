@@ -16,7 +16,9 @@ module.exports = {
   // REVIEW: Remove this if not using babel
   parser: "@babel/eslint-parser",
   parserOptions: {
-    ecmaVersion: 9,
+    // REVIEW: Depending on the browsers supported for the project, this might need to go down. Safari and non-Chromium Edge seem to be the biggest ones to hold things back, but the things they don't support from 2016 onwards are rarely used. Also, this probably isn't necessary if using Babel
+    // @see https://kangax.github.io/compat-table/es2016plus/
+    ecmaVersion: 2020,
     sourceType: "module",
   },
   settings: {
