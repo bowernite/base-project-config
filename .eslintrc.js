@@ -1,5 +1,5 @@
 module.exports = {
-  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks', 'eslint-plugin-import', '@typescript-eslint/eslint-plugin', '@typescript-eslint/parser', 'eslint-plugin-jsx-a11y'
+  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks', 'eslint-plugin-import', '@typescript-eslint/eslint-plugin', '@typescript-eslint/parser', 'eslint-plugin-jsx-a11y', '@babel/eslint-parser'
 
   // REVIEW: React plugins and rules
   // REVIEW: TypeScript rules/config (file extensions, plugins, parsers, etc.)
@@ -13,6 +13,8 @@ module.exports = {
     es6: true,
     node: true,
   },
+  // REVIEW: Remove this if not using babel
+  parser: "@babel/eslint-parser",
   parserOptions: {
     ecmaVersion: 9,
     sourceType: "module",
