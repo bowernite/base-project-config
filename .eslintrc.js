@@ -185,7 +185,7 @@ module.exports = {
       plugins: ["@typescript-eslint"],
       rules: {
         // Turn off rules that TypeScript's compiler can/will catch on its own. This is necessary, since this project has a mix of JS and TS files.
-        // REVIEW: Make sure the TS compiler enforces these rules on its own before comitting to turning these ESLint rules off
+        // REVIEW: Make sure the TS compiler enforces these rules on its own before committing to turning these ESLint rules off
         "no-unused-vars": 0,
         "no-use-before-define": 0,
         "no-undef": 0,
